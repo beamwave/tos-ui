@@ -1,0 +1,144 @@
+.invoice-1-page-container
+
+  header
+    background-color: $white-grey
+
+    .progress-bar
+      display: grid
+      grid-template-rows: repeat(2, max-content)
+      width: 40vw
+      padding: 25px 0
+      margin: 0 0 0 45px
+
+      p
+        margin: 0
+
+      .titles
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin: 0 0 10px
+        text-align: center
+        color: grey
+
+      .stages
+        display: grid
+        position: relative
+        grid-template-columns: repeat(3, 1fr)
+        justify-items: center
+        align-items: center
+
+        .stage
+          height: 40px
+          width: 40px
+          border-radius: 50%
+          background-color: lightgrey
+
+        .line
+          position: absolute
+          height: 8px
+          width: 75%
+          background-color: lightgrey
+
+  main
+    display: grid
+    grid-template-columns: 5fr 3fr
+    grid-column-gap: 50px
+    padding: 50px
+
+    .body
+      section
+        .user-information-form
+          display: grid
+          grid-row-gap: 15px
+
+          .form-group
+            display: grid
+            grid-row-gap: 5px
+            width: 75%
+
+        .grade-adjustments
+          position: relative
+
+          .grade-adjustments-button
+            text-align: right
+
+            &:hover + .grade-adjustments-tooltip
+              opacity: 1
+
+          .grade-adjustments-tooltip
+            position: absolute
+            top: -300px
+            right: -100px
+            width: 30vw
+            padding: 15px
+            border-radius: 5px
+            color: white
+            background-color: $dark-blue
+            transition: 500ms
+            opacity: 0
+
+
+        .students-tested-table
+          margin: 10px 0 0
+
+          .headers
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            border-bottom: 1.5px solid lightgrey
+            background-color: $white-grey
+            font-weight: 700
+
+            p
+              text-align: center
+
+          .grade-row
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            border-bottom: 1.5px solid lightgrey
+            
+            p
+              text-align: center
+
+          .total-row
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            border-bottom: 1.5px solid lightgrey
+            font-weight: 700
+
+            p
+              text-align: center
+
+        .contract-table
+          display: grid
+
+          .headers, .state, .district
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+
+          .state, .district
+            border-bottom: 1.5px solid lightgrey
+
+          .headers
+            background-color: $white-grey
+
+    aside
+      .sidepanel-container
+        display: grid
+        grid-row-gap: 15px
+        padding: 35px 25px
+        background-color: $white-grey
+
+        h3, p
+          margin: 0
+
+        textarea
+          height: 100px
+          resize: none
+          background-color: lighten($white-grey, 2%)
+
+        .link
+          margin: 10px 0 0
+          text-align: center
+          text-decoration: none
+
+        

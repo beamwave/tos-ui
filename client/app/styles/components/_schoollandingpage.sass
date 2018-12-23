@@ -1,0 +1,59 @@
+  
+.school-landing-container
+  padding: 50px
+
+  header
+    display: grid
+    grid-template-columns: 7fr 3fr
+    grid-column-gap: 15px
+
+    section
+      grid-column: 1
+
+    aside
+      grid-column: 2
+      display: grid
+      align-items: start
+
+      .button-container
+        padding: 25px 25px 60px
+        height: max-content
+        width: max-content
+        background-color: $white-grey
+
+  main
+    .admins
+      .admin
+        margin: 15px 0
+        border: 1px solid grey
+
+        header
+          display: grid
+          grid-template-columns: max-content 1fr max-content
+          align-items: center
+          background-color: $white-grey
+          padding: 0 50px
+
+          .title
+            grid-column: 1
+
+          .link
+            grid-column: -1
+
+        main
+          display: grid
+          grid-template-columns: 5fr 2fr
+          grid-column-gap: 30px
+          padding: 25px 45px
+
+          section
+            .messages
+              .message
+                display: grid
+                grid-template-columns: repeat(2, max-content)
+                align-items: center
+          
+          aside
+            display: grid
+            align-items: start
+            justify-items: center

@@ -1,0 +1,90 @@
+.grade-adjustments-modal
+  display: grid
+  width: 60vw
+  max-width: 700px
+  padding: 15px 45px 35px
+  text-align: left
+
+  .students-tested-table-modal
+    margin: 10px 0 0
+
+    .headers
+      display: grid
+      grid-template-columns: repeat(2, 1fr) 2fr
+      border-bottom: 1.5px solid lightgrey
+      background-color: $white-grey
+      font-weight: 700
+
+      p
+        text-align: center
+
+    .grade-row
+      display: grid
+      grid-template-columns: 1fr 3fr 2fr
+      align-items: center
+      border-bottom: 1.5px solid lightgrey
+      
+      p
+        margin: 0
+        padding: 12px 0
+        text-align: center
+
+      p:first-of-type
+        border-right: 1.5px solid lightgrey
+
+      input
+        padding: 10px 0
+        width: 10vw
+
+      .change-to-column
+        background-color: $white-grey
+
+    .total-row
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      border-bottom: 1.5px solid lightgrey
+      font-weight: 700
+
+      p
+        text-align: center
+
+  .button-group
+    display: grid
+    grid-template-columns: repeat(2, max-content)
+    grid-column-gap: 15px
+    justify-self: end
+    align-items: center
+    margin: 25px 0 0
+
+    .cancel
+      margin: 0
+      border: none
+      background: none
+      font: normal 18px Assistant
+      color: $light-grey
+      transition: .3s all ease-in-out
+
+      &:hover
+        cursor: pointer
+        color: darken($light-grey, 10%)
+      
+    .continue
+      grid-column: 2
+      padding: 10px 35px
+      border: none
+      outline: none
+      border-radius: 8px
+      font: normal 18px Assistant
+      color: $white
+      background-color: $blue
+      box-shadow: 0 10px 24px rgba(0,0,0,.15), 0 3px 10px rgba(0,0,0,.1)
+      transition: .3s all
+
+      &:hover
+        cursor: pointer
+        transform: translateY(-2px)
+
+      &:active
+        cursor: pointer
+        transform: scale(.9)
+        filter: brightness(93%)
